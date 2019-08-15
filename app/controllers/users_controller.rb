@@ -7,15 +7,18 @@ class UsersController < ApplicationController
 
   def show
     user = User.find_by(id: params[:id])
+    # byebug
     render json: user
   end
 
   def create
+    # byebug
     user = User.create(user_params)
 
     if user.valid?
       payload= {user_id: user.id}
-      token = JWT.encode(payload, 'meow', "HS256")
+      token = JWT.encode(payload, secret, "HS256")
+      # user_coordinates = Geocoder.search("Paris")
       render json: {token:token}
     else
       render json: {errors: user.errors.full_messages}, status:"try again 🐈"
@@ -23,7 +26,7 @@ class UsersController < ApplicationController
   end
 
   def profile
-    render json: current_user
+    render json: auth_current_user
   end
 
 

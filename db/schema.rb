@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 2019_08_07_195156) do
     t.string "password_digest"
     t.string "phone_number"
     t.string "address"
+    t.string "address_longtitude"
+    t.string "address_latitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

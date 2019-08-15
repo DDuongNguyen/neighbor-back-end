@@ -18,32 +18,6 @@ class User < ApplicationRecord
     has_secure_password
     validates :username, uniqueness: true
 
-    def is_inviter
-      if self.sent_invites != []
-        true
-      else
-        false
-      end
-    end
 
-    def number_of_events_hosting
-      if self.sent_invites != []
-        self.sent_invites.count
-      end
-    end
-
-    def is_invitee
-      if self.received_invites != []
-        true
-      else
-        false
-      end
-    end
-
-    def number_of_events_invites_received
-      if self.received_invites != []
-        self.received_invites.count
-      end
-    end
 
 end

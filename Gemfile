@@ -18,9 +18,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'jwt'
 
+gem  'geocoder'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
