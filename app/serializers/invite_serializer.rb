@@ -1,5 +1,4 @@
 class InviteSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id,:inviter,:invitee
 
-  has_many :sent_invite_to
 end

@@ -1,5 +1,5 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :time, :number_of_guests, :guest_list
+  attributes :id, :name, :description, :time, :number_of_guests, :guest_list, :host_name, :host_id
 
   belongs_to :host_name
   belongs_to :event_addess
@@ -24,6 +24,12 @@ class EventSerializer < ActiveModel::Serializer
   def host_name
     # debugger
     object.user.name
+
+  end
+
+  def host_id
+    # debugger
+    object.user.id
 
   end
 

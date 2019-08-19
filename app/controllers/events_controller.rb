@@ -9,5 +9,15 @@ class EventsController < ApplicationController
     render json: event
   end
 
+  def create
+    # byebug
+    user = User.create(user_params)
+  end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:name,:user_id,:description, :time)
+  end
 
 end
