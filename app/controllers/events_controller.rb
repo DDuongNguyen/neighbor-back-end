@@ -10,14 +10,26 @@ class EventsController < ApplicationController
   end
 
   def create
+    # debugger
+    event= Event.create(event_params)
+    render json: auth_current_user
+  end
+
+  def update
     # byebug
-    user = User.create(user_params)
+
+    # rails_blob_path(event.params[:image], disposition: "attachment")
+
+    event= Event.find(params[:id])
+    event.image.attach(params[:image])
+    user = event.user
+    render json: user
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:name,:user_id,:description, :time)
+    params.require(:event).permit(:user_id,:name,:description, :time)
   end
 
 end

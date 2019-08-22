@@ -29,6 +29,17 @@ class UsersController < ApplicationController
     render json: auth_current_user
   end
 
+  def update
+    # debugger
+    newLatitude = Geocoder.search(params[:newAddress]).first.coordinates[1]
+    newLongtitude = Geocoder.search(params[:newAddress]).first.coordinates[0]
+    user = User.find(params[:user_id])
+    user.update(name:params[:newName],phone_number:params[:newNumber],address:params[:newAddress],address_longtitude:newLatitude,address_latitude:newLongtitude)
+    render json: user
+  end
+
+
+
 
   private
   def user_params

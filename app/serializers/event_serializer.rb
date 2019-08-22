@@ -1,5 +1,6 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :time, :number_of_guests, :guest_list, :host_name, :host_id
+
+  attributes :id, :name, :description, :time, :number_of_guests, :guest_list, :host_name, :host_id, :image
 
   belongs_to :host_name
   belongs_to :event_addess
@@ -9,8 +10,8 @@ class EventSerializer < ActiveModel::Serializer
   def guest_list
     # byebug
     guest_info = []
-    object.invitees.each_with_index do |guest,index|
-    guest_info << {id: index+1, name: guest.name, phone_number: guest.phone_number}
+    object.invitees.each_with_index do |guest|
+    guest_info << {id: guest.id, name: guest.name, phone_number: guest.phone_number}
     end
     return guest_info
   end
@@ -43,6 +44,15 @@ class EventSerializer < ActiveModel::Serializer
 
   def event_latitude
     object.user.address_latitude
+  end
+
+  def image
+    if object.image.attached?
+      "http://localhost:3000/" + Rails.application.routes.url_helpers.rails_blob_path(object.image, only_path: true)
+    else
+      "https://pbs.twimg.com/media/DngZNe1XoAUCCI5.png"
+    end
+
   end
 
 end

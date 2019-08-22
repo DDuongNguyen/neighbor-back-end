@@ -22,5 +22,26 @@ class ApplicationController < ActionController::API
     User.find(user_id)
   end
 
+  def account_sid
+    Rails.application.credentials.account_sid
+  end
 
+  def auth_token
+    Rails.application.credentials.auth_token
+  end
+
+  def twilio_number
+    '+18482259039'
+  end
+
+  def send_message(phone_number, message)
+    # debugger
+    @client= Twilio::REST::Client.new(account_sid, auth_token)
+    message= @client.messages.create(
+      body:message,
+      from: twilio_number,
+      to: phone_number
+    )
+    puts message.sid
+  end
 end

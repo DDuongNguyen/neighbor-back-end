@@ -15,25 +15,25 @@ Invite.destroy_all
 
 duong= User.create(name: "yoon", username: 'yoon', password: 'yoon', phone_number: '347-925-2777', address:'77 E 4th St, New York, NY 10003', address_latitude:'40.573255', address_longtitude:'-73.990128')
 
-daniela= User.create(name: "daniela", username: 'daniela', password: 'daniela', phone_number: '816-243-5655', address:'18 E Broadway, New York, NY 10002',address_longtitude:'-73.997185', address_latitude:'40.713684'  )
+daniela= User.create(name: "daniela", username: 'daniela', password: 'daniela', phone_number: '347-779-6558', address:'18 E Broadway, New York, NY 10002',address_longtitude:'-73.997185', address_latitude:'40.713684'  )
 
-momo= User.create(name: "momo", username: 'momo', password: 'momo', phone_number: '901-567-6858', address:'425 Lafayette St, New York, NY 10003', address_longtitude: '-73.991768',address_latitude:'40.729210'  )
+momo= User.create(name: "momo", username: 'momo', password: 'momo', phone_number: '347-925-2777', address:'425 Lafayette St, New York, NY 10003', address_longtitude: '-73.991768',address_latitude:'40.729210'  )
 
-coulson= User.create(name: "coulson", username: 'coulson', password: 'coulson', phone_number: '213-425-3772', address:'113 St Marks Pl, New York, NY 10009' ,address_longtitude:'-73.983727' ,address_latitude:'40.727169' )
+coulson= User.create(name: "coulson", username: 'coulson', password: 'coulson', phone_number: '631-827-0917', address:'113 St Marks Pl, New York, NY 10009' ,address_longtitude:'-73.983727' ,address_latitude:'40.727169' )
 
-buck= User.create(name: "buck", username: 'buck', password: 'buck', phone_number: '834-979-8176', address:'443 E 6th St, New York, NY 10009',address_longtitude:'-73.984300',address_latitude:'40.725820'  )
+buck= User.create(name: "buck", username: 'buck', password: 'buck', phone_number: '347-925-2777', address:'443 E 6th St, New York, NY 10009',address_longtitude:'-73.984300',address_latitude:'40.725820'  )
 
-caitlin= User.create(name: "caitlin", username: 'caitlin', password: 'caitlin', phone_number: '748-339-3604', address:'505 E 12th St, New York, NY 10009',address_longtitude:'-74.001926',address_latitude:'40.710131'  )
+caitlin= User.create(name: "caitlin", username: 'caitlin', password: 'caitlin', phone_number: '631-371-7351', address:'505 E 12th St, New York, NY 10009',address_longtitude:'-74.001926',address_latitude:'40.710131'  )
 
-nolan= User.create(name: "nolan", username: 'nolan', password: 'nolan', phone_number: '630-839-4935', address:'146 Essex St, New York, NY 10002', address_longtitude:'-73.980830',address_latitude:'40.729030'  )
+nolan= User.create(name: "nolan", username: 'nolan', password: 'nolan', phone_number: '347-925-2777', address:'146 Essex St, New York, NY 10002', address_longtitude:'-73.980830',address_latitude:'40.729030'  )
 
-george= User.create(name: "george", username: 'george', password: 'george', phone_number: '773-977-3148', address:'199 Bowery, New York, NY 10002', address_longtitude:'-73.993263',address_latitude:'40.721039'  )
+george= User.create(name: "george", username: 'george', password: 'george', phone_number: '347-925-2777', address:'199 Bowery, New York, NY 10002', address_longtitude:'-73.993263',address_latitude:'40.721039'  )
 
-james= User.create(name: "james", username: 'james', password: 'james', phone_number: '535-726-6353', address:'185 Bleecker St Suite B, New York, NY 10012',address_longtitude:'-73.993263',address_latitude:'40.721039'  )
+james= User.create(name: "james", username: 'james', password: 'james', phone_number: '347-925-2777', address:'185 Bleecker St Suite B, New York, NY 10012',address_longtitude:'-73.993263',address_latitude:'40.721039'  )
 
-coral= User.create(name: "coral", username: 'coral', password: 'coral', phone_number: '472-281-0589', address:'32 Spring St, New York, NY 10012', address_longtitude:'-73.995728',address_latitude:'40.721500'  )
+coral= User.create(name: "coral", username: 'coral', password: 'coral', phone_number: '347-925-2777', address:'32 Spring St, New York, NY 10012', address_longtitude:'-73.995728',address_latitude:'40.721500'  )
 
-coral= User.create(name: "memeow", username: 'memeow', password: 'memeow', phone_number: '111-2181-0512389', address:'105 Mulberry St, New York, NY 10013', address_longtitude:'-73.998550',address_latitude:'40.717350'  )
+coral= User.create(name: "memeow", username: 'memeow', password: 'memeow', phone_number: '347-925-2777', address:'105 Mulberry St, New York, NY 10013', address_longtitude:'-73.998550',address_latitude:'40.717350'  )
 
 time= Time.at(rand * Time.now.to_i)
 
