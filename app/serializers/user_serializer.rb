@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :username, :phone_number, :address, :is_inviter, :is_invitee,:number_of_events_hosting, :number_of_events_invites_received, :address_latitude, :address_longtitude, :message
+  attributes :id, :name, :username, :phone_number, :address, :is_inviter, :is_invitee,:number_of_events_hosting, :number_of_events_invites_received, :address_latitude, :address_longtitude, :user_image
 
   # has_many :sent_invites
   has_many :event_hosting
@@ -40,10 +40,8 @@ class UserSerializer < ActiveModel::Serializer
   end
 
   def event_going
-    # debugger
     event_info= []
     object.received_invites.map do |invite|
-      # debugger
     event_info <<  {id: invite.event.id, host_name:invite.inviter.name ,event_name: invite.event.name, description: invite.event.description, time:invite.event.time}
     end
     return event_info
@@ -57,5 +55,14 @@ class UserSerializer < ActiveModel::Serializer
     end
   end
 
+  def user_image
+    if object.image.attached?
+      "http://localhost:3000/" + Rails.application.routes.url_helpers.rails_blob_path(object.image, only_path: true)
+    else
+      # debugger
+      `https://www.uic.mx/posgrados/files/2018/05/default-user.png`
+    end
+
+  end
 
 end

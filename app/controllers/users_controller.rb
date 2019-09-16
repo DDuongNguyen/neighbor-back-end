@@ -39,6 +39,12 @@ class UsersController < ApplicationController
   end
 
 
+  def upload_image
+    # debugger
+    user = User.find(params[:id])
+    user.image.attach(params[:image])
+    render json:user
+  end
 
 
   private
