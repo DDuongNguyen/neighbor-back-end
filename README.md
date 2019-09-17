@@ -7,7 +7,7 @@ The NeighborHood emulates the experience of MeetUp yet is more geocentric and it
 This is a Ruby on Rails API created using ActiveRecord.
 Ruby version 2.6.1
 
-## How to Install The NeighborHOood API
+## How to Install The NeighborHood API
 1. Use your terminal to navigate into the place where you want to clone The NeighborHood directory and git clone the url.
 2. In the project directory, you can run:
       #`bundle install` 
