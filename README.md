@@ -19,7 +19,7 @@ The NeighborHood API is needed in order to accept HTTP requests from it's fronte
 * Uploading Pictures through Active Storage
 * Have access to seeded produce and their categories. 
 
-## More About Our App
+## More About The App
 The NeighborHood API requires ActiveRecord, ActiveStorage and gems such as CORS, JWT, and Bcrypt.
 
 ### License
