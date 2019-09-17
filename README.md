@@ -2,6 +2,8 @@
 
 The NeighborHood is a platform for finding and building local communities. People use NeighborHood to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together.
 
+The NeighborHood emulates the experience of MeetUp yet is more geocentric and its communication is depended on SMS.
+
 This is a Ruby on Rails API created using ActiveRecord.
 Ruby version 2.6.1
 
