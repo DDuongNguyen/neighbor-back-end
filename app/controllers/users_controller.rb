@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     if user.valid?
       payload= {user_id: user.id}
       token = JWT.encode(payload, secret, "HS256")
-      # user_coordinates = Geocoder.search("Paris")
       render json: {token:token}
     else
       render json: {errors: user.errors.full_messages}, status:"try again 🐈"

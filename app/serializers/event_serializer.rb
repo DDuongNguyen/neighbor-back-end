@@ -51,10 +51,7 @@ class EventSerializer < ActiveModel::Serializer
       "http://localhost:3000/" + Rails.application.routes.url_helpers.rails_blob_path(object.image, only_path: true)
     else
       events=[
-        'https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2016/05/10105129/discount-codes-reach-more-people-eventbrite.png',
-        'http://blog.nextbee.com/wp-content/uploads/2018/11/corporate-alumni-event.jpg',
         'https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg',
-        'https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_813,q_60,w_1637/v1/clients/annarbor/Beer2_d8f3cb59-212d-4c76-8e60-a2bb7822225f.jpg'
       ]
       return events.sample
     end
