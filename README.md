@@ -1,48 +1,28 @@
-API key: AoNK51DE7kLoGiY_RWNUvx3gFfgSsBHMiJN45CLjB9GIVNR7HheV8RMEd6bAc3ox
+# The NeighborHood API 
 
-data.resourceSets[0].resources[0].travelDistance
+The NeighborHood is a platform for finding and building local communities. People use NeighborHood to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together.
 
-http://dev.virtualearth.net/REST/v1/Routes/{travelMode}?wayPoint.1={wayPpoint1}&viaWaypoint.2={viaWaypoint2}&waypoint.3={waypoint3}&wayPoint.n={waypointN}&heading={heading}&optimize={optimize}&avoid={avoid}&distanceBeforeFirstTurn={distanceBeforeFirstTurn}&routeAttributes={routeAttributes}&timeType={timeType}&dateTime={dateTime}&maxSolutions={maxSolutions}&tolerances={tolerances}&distanceUnit={distanceUnit}&key={BingMapsKey}
+The NeighborHood emulates the experience of MeetUp yet is more geocentric and its communication is depended on SMS.
 
-users can invite each other to an event
-a user have to create an event
-when he create an event he CAN invite people
-status pending*? by default status for invite is false
-status is attribute of invites.
-people can just join into the event if the requirement meets (geolocation)
+This is a Ruby on Rails API created using ActiveRecord.
+Ruby version 2.6.1
 
-=> pull out event creator, create an invite between current user and event creator.
-to have event hold another foreign key (user_id)
+## How to Install The NeighborHood API
+1. Use your terminal to navigate into the place where you want to clone The NeighborHood directory and git clone the url.
+2. In the project directory, you can run:
+      #`bundle install` 
+   This will install the necessary gems needed to run the backend.
+3. Run command `rails db:migrate && rails db:seed` in order to set up the tables and the necessary seeded files.
+4. Run `rails s` and copy the url in your terminal (more than likely localhost:3000) and open up your browser using the url in order to having a running server that The Neighborhood can make requests to.
 
-message
-v
-|
-user -< events -< tasks
-|         |         
-^         ^         
-      invitation
+## How to Use TheNeighborHood API
+The NeighborHood API is needed in order to accept HTTP requests from it's frontend The NeighborHood. This allows users to:
+* Create, read, and update their accounts with the help of JavaScript Web Tokens and Bcrypt.
+* Uploading Pictures through Active Storage
+* Have access to seeded produce and their categories. 
 
-# README
+## More About The App
+The NeighborHood API requires ActiveRecord, ActiveStorage and gems such as CORS, JWT, and Bcrypt.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### License
+This project is licensed under the Learn.co Educational Content License. Please read `LICENSE.md` location in the directory or click on the following link (http://learn.co/content-license) for further details.
